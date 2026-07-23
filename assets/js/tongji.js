@@ -3,7 +3,7 @@
  * 百度统计后台：https://tongji.baidu.com → 新增网站 → 获取代码中的 hm.js?xxxx 那段即为 token。
  */
 (function () {
-  var TOKEN = "BAIDU_TONGJI_TOKEN"; // ← 替换为百度统计站点 token
+  var TOKEN = "d98a78421655a05bf91eaec3524f868f"; // 百度统计站点 token
   if (!TOKEN || TOKEN === "BAIDU_TONGJI_TOKEN") return; // 未配置时静默跳过，不影响网站运行
 
   var _hmt = window._hmt = window._hmt || [];
