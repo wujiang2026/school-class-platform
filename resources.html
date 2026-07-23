@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>资源库 · 学校和班级管理平台</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html"><span class="logo">🏫</span><span>学校和班级管理平台</span></a>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">首页</a>
+        <a href="resources.html" class="active">资源库</a>
+        <a href="level-test.html">班主任水平</a>
+        <a href="personality-test.html">性格测试</a>
+        <a href="principal-test.html">学校管理测评</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <header class="res-header">
+      <span class="eyebrow">RESOURCE LIBRARY</span>
+      <h1 class="section-title">资源库</h1>
+      <p class="section-sub">覆盖学校管理 / 班级管理 / 新教师三大板块 · 共 <b id="totalCount">147</b> 项精选资源，分类整理、随取随用</p>
+    </header>
+
+    <div class="board-tabs" id="boardTabs"></div>
+
+    <div class="res-layout">
+      <!-- 侧边栏 -->
+      <aside class="res-sidebar">
+        <h4>资源分类</h4>
+        <div id="catList"></div>
+      </aside>
+
+      <!-- 内容区 -->
+      <main>
+        <div class="filter-bar">
+          <div class="filter-row">
+            <span class="filter-label">学段</span>
+            <div id="stageFilter" style="display:flex;gap:8px;flex-wrap:wrap"></div>
+            <div class="search-box">
+              <span>🔍</span>
+              <input type="text" id="searchInput" placeholder="搜索资源名称或描述…">
+            </div>
+          </div>
+          <div class="filter-row" id="domainRow">
+            <span class="filter-label">领域</span>
+            <div id="domainFilter" style="display:flex;gap:8px;flex-wrap:wrap"></div>
+          </div>
+        </div>
+
+        <div id="content"></div>
+      </main>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="brand"><span class="logo">🏫</span><span>学校和班级管理平台</span></div>
+    <div>学校和班级管理平台 · 资源库 ｜ 共 16 大类 · 147 项资源，持续更新中</div>
+  </footer>
+
+  <script src="assets/js/tracker.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/resources.js"></script>
+  <script src="assets/js/nav.js"></script>
+</body>
+</html>

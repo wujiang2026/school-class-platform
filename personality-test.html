@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>性格测试 · 学校和班级管理平台</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html"><span class="logo">🏫</span><span>学校和班级管理平台</span></a>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">首页</a>
+        <a href="resources.html">资源库</a>
+        <a href="level-test.html">班主任水平</a>
+        <a href="personality-test.html" class="active">性格测试</a>
+        <a href="principal-test.html">学校管理测评</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="test-hero">
+    <span class="eyebrow">PERSONALITY TEST</span>
+    <h1>性格测试</h1>
+    <p id="heroDesc">先选择你的身份：班主任 / 校长 / 新教师——三者题库不同，全部为真实工作情境（每次从题库随机抽 12 题，每次不太一样）。凭第一反应选出「最像自己会做的」做法，测出你是 🐯老虎型 / 🦚孔雀型 / 🐨考拉型 / 🦉猫头鹰型，并深度分析你的沟通交流特点。</p>
+  </div>
+
+  <div class="wrap" style="padding-bottom:40px">
+    <!-- 身份选择 -->
+    <div class="role-pick" id="roleArea">
+      <div class="role-grid">
+        <div class="role-card rp-class rise" data-role="teacher" style="animation-delay:.05s">
+          <div class="rp-ico">🎒</div>
+          <h3>我是班主任</h3>
+          <p>用真实带班情境，测出你的带班性格与沟通风格，帮你扬长避短、带好一个班。</p>
+          <span class="rp-go">开始测试 <span>→</span></span>
+        </div>
+        <div class="role-card rp-principal rise" data-role="principal" style="animation-delay:.15s">
+          <div class="rp-ico">🏫</div>
+          <h3>我是校长</h3>
+          <p>用真实治校管理情境，测出你的领导风格与沟通特点，帮你识长补短、治好一所校。</p>
+          <span class="rp-go">开始测试 <span>→</span></span>
+        </div>
+        <div class="role-card rp-newteacher rise" data-role="newteacher" style="animation-delay:.25s">
+          <div class="rp-ico">🌱</div>
+          <h3>我是新教师</h3>
+          <p>用近三年新入职教师的真实成长情境，测出你的性格底色与沟通特点，帮你少走弯路、平稳度过适应期。</p>
+          <span class="rp-go">开始测试 <span>→</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz hidden" id="quiz">
+      <div id="questionArea" class="hidden">
+        <div class="progress-wrap">
+          <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+          <span class="progress-text" id="progressText">第 1 / 12 题</span>
+        </div>
+        <h2 class="q-title" id="qTitle"></h2>
+        <div class="options" id="options"></div>
+        <div class="quiz-nav">
+          <button class="btn btn-ghost" id="prevBtn">← 上一题</button>
+          <button class="btn btn-primary" id="nextBtn">下一题 →</button>
+        </div>
+      </div>
+      <div id="resultArea" class="result hidden"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="brand"><span class="logo">🏫</span><span>学校和班级管理平台</span></div>
+    <div>性格无好坏，了解自己是成长的开始 · 用心陪伴每一位校长、班主任与新教师成长</div>
+  </footer>
+
+  <script src="assets/js/tracker.js"></script>
+  <script src="assets/js/personality-test.js"></script>
+  <script src="assets/js/nav.js"></script>
+</body>
+</html>

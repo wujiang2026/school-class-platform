@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>留言互动 · 学校和班级管理平台</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html"><span class="logo">🏫</span><span>学校和班级管理平台</span></a>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+      <div class="nav-links" id="navLinks"></div>
+    </div>
+  </nav>
+
+  <div class="test-hero">
+    <span class="eyebrow">MESSAGE BOARD</span>
+    <h1>留言互动</h1>
+    <p>在这里留下你的带班 / 治校经验、疑问或建议，和其他老师交流互动。本机版留言保存在你当前浏览器，便于先体验互动形态。</p>
+  </div>
+
+  <div class="wrap" style="padding-bottom:40px">
+    <div class="msg-form">
+      <input class="msg-name" id="msgName" maxlength="20" placeholder="你的昵称（如：三年级王老师）">
+      <textarea class="msg-text" id="msgText" maxlength="500" placeholder="说点什么吧：一个管用的方法、一个想不通的难题、一句鼓励……"></textarea>
+      <div class="msg-form-foot">
+        <span class="msg-tip">友善交流，互相成就 ✦</span>
+        <button class="btn btn-primary" id="msgSend">发布留言</button>
+      </div>
+    </div>
+
+    <h3 class="dash-h" style="margin:28px 0 14px">💬 留言墙</h3>
+    <div class="msg-list" id="msgList"></div>
+
+    <div class="note-box">
+      💡 当前为<strong>纯本地版</strong>：留言仅保存在你当前浏览器，换设备 / 清缓存会丢失，也看不到其他老师的留言。若需要<strong>真正跨用户共享、互相可见的互动社区</strong>，可接入云后端（如 Supabase / LeanCloud 或自建服务），我可帮你升级为实时留言板。
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="brand"><span class="logo">🏫</span><span>学校和班级管理平台</span></div>
+    <div>留言仅保存在本机浏览器 · 用心陪伴每一位校长、班主任与新教师成长</div>
+  </footer>
+
+  <script src="assets/js/tracker.js"></script>
+  <script src="assets/js/messages.js"></script>
+  <script src="assets/js/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>班级管理水平测试 · 学校和班级管理平台</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html"><span class="logo">🏫</span><span>学校和班级管理平台</span></a>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">首页</a>
+        <a href="resources.html">资源库</a>
+        <a href="level-test.html" class="active">班主任水平</a>
+        <a href="personality-test.html">性格测试</a>
+        <a href="principal-test.html">学校管理测评</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="test-hero">
+    <span class="eyebrow">LEVEL TEST</span>
+    <h1>班级管理水平测试</h1>
+    <p>依据《中小学教师培训课程指导标准（班级管理）》设计。全部为一线真实工作情境（共 12 题，由易到难），你只需选出「最接近自己真实做法」的选项——由做法客观反推你在五大维度上的能力水平，而非主观自评。含反向情境校验，请放松作答。</p>
+  </div>
+
+  <div class="wrap" style="padding-bottom:40px">
+    <div class="quiz" id="quiz">
+      <!-- 题目 -->
+      <div id="questionArea">
+        <div class="progress-wrap">
+          <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+          <span class="progress-text" id="progressText">第 1 / 12 题</span>
+        </div>
+        <h2 class="q-title" id="qTitle"></h2>
+        <div class="options" id="options"></div>
+        <div class="quiz-nav">
+          <button class="btn btn-ghost" id="prevBtn">← 上一题</button>
+          <button class="btn btn-primary" id="nextBtn">下一题 →</button>
+        </div>
+      </div>
+
+      <!-- 结果 -->
+      <div id="resultArea" class="result hidden"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="brand"><span class="logo">🏫</span><span>学校和班级管理平台</span></div>
+    <div>测评结果仅供自我诊断参考 · 用心陪伴每一位班主任成长</div>
+  </footer>
+
+  <script src="assets/js/tracker.js"></script>
+  <script src="assets/js/level-test.js"></script>
+  <script src="assets/js/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新教师专业测评 · 学校和班级管理平台</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html"><span class="logo">🏫</span><span>学校和班级管理平台</span></a>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+      <div class="nav-links" id="navLinks"></div>
+    </div>
+  </nav>
+
+  <div class="test-hero">
+    <span class="eyebrow">NEW TEACHER TEST</span>
+    <h1>新教师专业测评</h1>
+    <p>面向近三年新入职教师，依据《小学 / 中学教师专业标准（试行）》(2012) 三大维度设计。全部为真实教育教学情境（共 12 题，由易到难），你只需选出「最接近自己真实做法」的选项——由做法客观反推你的专业发展水平，而非主观自评。含反向情境校验，请放松作答。</p>
+  </div>
+
+  <div class="wrap" style="padding-bottom:40px">
+    <div class="quiz" id="quiz">
+      <div id="questionArea">
+        <div class="progress-wrap">
+          <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+          <span class="progress-text" id="progressText">第 1 / 12 题</span>
+        </div>
+        <h2 class="q-title" id="qTitle"></h2>
+        <div class="options" id="options"></div>
+        <div class="quiz-nav">
+          <button class="btn btn-ghost" id="prevBtn">← 上一题</button>
+          <button class="btn btn-primary" id="nextBtn">下一题 →</button>
+        </div>
+      </div>
+
+      <div id="resultArea" class="result hidden"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="brand"><span class="logo">🏫</span><span>学校和班级管理平台</span></div>
+    <div>测评结果仅供自我诊断参考 · 用心陪伴每一位新教师成长</div>
+  </footer>
+
+  <script src="assets/js/tracker.js"></script>
+  <script src="assets/js/newteacher-test.js"></script>
+  <script src="assets/js/nav.js"></script>
+</body>
+</html>

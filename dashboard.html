@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数据看板 · 学校和班级管理平台</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html"><span class="logo">🏫</span><span>学校和班级管理平台</span></a>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+      <div class="nav-links" id="navLinks"></div>
+    </div>
+  </nav>
+
+  <div class="test-hero">
+    <span class="eyebrow">DATA DASHBOARD</span>
+    <h1>数据看板</h1>
+    <p>这里汇总你在本机浏览器上的浏览记录与测评足迹，便于复盘自己的使用与成长轨迹。所有数据只保存在当前设备，不上传、不跨用户。</p>
+  </div>
+
+  <div class="wrap" style="padding-bottom:40px">
+    <div class="dash-grid" id="miniStats"></div>
+
+    <div class="dash-section">
+      <h3 class="dash-h">📊 各页面访问量</h3>
+      <div class="visit-bars" id="pageBars"></div>
+    </div>
+
+    <div class="dash-grid dash-2col">
+      <div class="dash-section">
+        <h3 class="dash-h">🕘 最近浏览记录</h3>
+        <div class="visit-list" id="visitList"></div>
+      </div>
+      <div class="dash-section">
+        <h3 class="dash-h">🧪 测评足迹</h3>
+        <div class="visit-list" id="testList"></div>
+      </div>
+    </div>
+
+    <div class="note-box">
+      💡 本看板为<strong>纯本地版</strong>：数据存放在你当前浏览器，换设备 / 清缓存会丢失，也无法看到其他老师的记录。若需要<strong>跨用户汇总、真实后台统计与互动留言</strong>，可接入云后端（如 Supabase / LeanCloud 或自建服务），我可帮你升级。
+    </div>
+
+    <div style="text-align:center;margin-top:22px">
+      <button class="btn btn-ghost" id="clearBtn">清空本机数据</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="brand"><span class="logo">🏫</span><span>学校和班级管理平台</span></div>
+    <div>数据仅保存在本机浏览器 · 用心陪伴每一位校长、班主任与新教师成长</div>
+  </footer>
+
+  <script src="assets/js/tracker.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+  <script src="assets/js/nav.js"></script>
+</body>
+</html>
