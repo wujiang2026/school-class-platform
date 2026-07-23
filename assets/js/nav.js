@@ -7,6 +7,7 @@
     { href: "principal-test.html",  label: "学校管理" },
     { href: "newteacher-test.html", label: "新师测评" },
     { href: "personality-test.html",label: "性格测试" },
+    { href: "booking.html",         label: "在线约课" },
     { href: "dashboard.html",       label: "数据看板" },
     { href: "messages.html",        label: "留言互动" }
   ];
